@@ -4,3 +4,52 @@
 // 
 
 // Add extra styles here
+
+@import 'components/cvl-header';
+@import 'components/cvl-card';
+@import 'components/cvl-footer';
+
+
+// DPS header
+
+.moj-header_dps {
+    border-bottom: none;
+}
+
+// Sign in
+.show-password {
+    font-size: 16px;
+    background-color: #f3f2f1;
+    color: #0b0c0c;
+    width: 80px;
+    line-height: 1.2;
+    box-shadow: 0 2px 0 #929191;
+    margin-bottom: 0;
+}
+
+// Wide width
+
+.govuk-width-container--wide {
+    @include govuk-width-container(1200px);
+  }
+  
+  .app-width-wide .govuk-width-container {
+    @include govuk-width-container(1200px);
+  }
+
+
+  // Case list red accent 
+
+  .urgent-highlight {
+    border-left: 5px solid #d4351c;
+    font-weight: bold;
+    padding-left: 5px;
+    display: block;
+}
+
+.urgent-highlight-message {
+    color: #0b0c0c;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.25;
+}

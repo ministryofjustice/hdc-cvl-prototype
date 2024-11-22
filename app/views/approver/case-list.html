@@ -1,0 +1,121 @@
+{% extends "layouts/cvl.html" %}
+
+{% set pageName="Home" %}
+
+{% set htmlClasses = 'app-width-wide' %}
+
+{% block header %}
+
+{% include "components/cvl-dm-header/include.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+    
+  
+    <h1 class="govuk-heading-xl">
+      Select someone to approve licences and supervision orders
+        </h1>
+   
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--s" for="event-name">
+              Find a case
+            </label>
+          </h1>
+          <div id="event-name-hint" class="govuk-hint">
+            Search by name, prison number or probation practitioner
+          </div>
+          <input class="govuk-input govuk-!-width-one-third" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Search
+          </button>
+        </div>
+
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+          <ul class="moj-sub-navigation__list">
+              <li class="moj-sub-navigation__item">
+                  <a class="moj-sub-navigation__link" aria-current="page" href="#">Approval needed</a>
+              </li>
+              <li class="moj-sub-navigation__item">
+                  <a class="moj-sub-navigation__link" href="#">Recently approved</a>
+              </li>
+          </ul>
+      </nav>
+
+        <h2 class="govuk-heading-l">
+          Approval needed
+            </h2>
+
+            <div class="govuk-!-padding-top-2 govuk-!-margin-bottom-2" style="border-bottom: 1px solid #b1b4b6;">
+              <p>
+                  Showing:
+                  <span class="govuk-body govuk-!-font-weight-bold">
+                      Pentonville (HMP) 
+                  </span>
+                  <a class="govuk-link govuk-!-margin-left-3" href="#">
+                      Licences for other establishments
+                  </a>
+              </p>
+          </div>
+  </div>
+</div>
+
+
+<table class="govuk-table" data-module="moj-sortable-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+
+      <th scope="col" class="govuk-table__header" aria-sort="none">Name</th>
+
+      <th scope="col" class="govuk-table__header" aria-sort="none">Prison number</th>
+
+      <th scope="col" class="govuk-table__header" aria-sort="none">Probation practitioner</th>
+
+      <th scope="col" class="govuk-table__header" aria-sort="none">Submitted by</th>
+
+      <th scope="col" class="govuk-table__header" aria-sort="none">Release date</th>
+
+
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell"><a href="#" class="govuk-link--no-visited-state">Cyphoonipher Bransabert</a></td>
+
+      <td class="govuk-table__cell">G6653GL</td>
+
+      <td class="govuk-table__cell"><a href="#" class="govuk-link--no-visited-state">Stephen McVeigh</a></td>
+
+      <td class="govuk-table__cell">CVL COM</td>
+
+      <td class="govuk-table__cell"><span class="urgent-highlight">27 May 2025</span><span class="urgent-highlight urgent-highlight-message">Early release</span></td>
+
+    </tr>
+
+
+
+  </tbody>
+</table>
+
+
+<!-- <div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+      <h3 class="govuk-heading-s">There are no licences pending approval which match the search criteria.</h3>
+  </div>
+</div> -->
+
+{% endblock %}
+
+{% block footer %}
+
+{% include "components/cvl-dm-ca-footer/include.html" %}
+
+{% endblock %}

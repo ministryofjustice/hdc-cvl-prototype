@@ -1,0 +1,59 @@
+{% extends "layouts/sign-in.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="cvl-home.html" method="get">
+
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          Sign in
+        </h1>
+      </legend>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="one-half">
+          Username
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="one-half" name="oneHalf" type="text">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="one-half">
+        Password
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="one-half" name="oneHalf" type="text">
+        <button type="button" class="govuk-button govuk-button--secondary show-password" data-module="govuk-button">Show</button>
+      </div>
+
+    </fieldset>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Sign in
+    </button>
+  </form>
+
+    <p><a href="../../../_common/not-testing.html" class="govuk-link--no-visited-state">Sign in with a justice.gov.uk email</a></p>
+
+    <h2 class="govuk-heading-m">Problems signing in</h2>
+     
+    <p><a href="../../../_common/not-testing.html" class="govuk-link--no-visited-state">I have forgotten my password</a></p>
+    <p><a href="../../../_common/not-testing.html" class="govuk-link--no-visited-state">I have forgotten my username</a></p>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Why won't my password work?
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        Your password is case sensitive which means you must enter your password exactly as you first created it. For example if your password is <strong>H3LloWorlD</strong> you must enter it exactly like that.
+      </div>
+    </details>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+
+{%- block beforeContent -%}
+<div class="govuk-phase-banner" style="border-bottom: none;">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      BETA
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service - your <a class="govuk-link govuk-link--no-visited-state" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+
+{% block footer %}
+
+{{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: "#",
+        text: "Feedback and support"
+      },
+      {
+        href: "#",
+        text: "Terms and conditions"
+      },
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Clear data"
+      }
+    ]
+  }
+}) }}
+{% endblock %}

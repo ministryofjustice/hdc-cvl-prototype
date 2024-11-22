@@ -1,0 +1,70 @@
+{% extends "layouts/cvl.html" %}
+
+{% set pageName="Home" %}
+
+{% set htmlClasses = 'app-width-wide' %}
+
+{% block header %}
+
+{% include "components/cvl-pp-header/include.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <div class="govuk-inset-text govuk-!-margin-top-0">
+      <h2 class="govuk-heading-l">Updates to additional licence conditions
+      </h2>
+      <p>An updated <a href="https://www.gov.uk/government/publications/licence-conditions-policy-framework" class="govuk-link--no-visited-state">Licence Conditions Policy Framework</a> has been published. It contains some new additional conditions. Others have changed and some removed.</p>
+      <p>You can now use these additional conditions in this service. If you vary a licence containing conditions that have changed, you will be asked to review the changes so the updated conditions can be used.</p>
+    </div>
+
+  </div>
+</div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+    
+  
+    <h1 class="govuk-heading-l">
+      Create and vary a licence
+        </h1>
+   
+
+        <div class="govuk-grid-row card-group">
+                
+          <div class="govuk-grid-column-one-third card-group__item">
+              
+<div id="createLicenceCard" class="card card--clickable" data-qa="create-licence-link">
+<h2 class="govuk-heading-m card__heading">
+  <a class="govuk-link card__link govuk-link--no-visited-state" href="#">Create and edit a licence before a release date</a>
+</h2>
+<p class="govuk-body card__description">Create standard determinate licences and post sentence supervision orders for people in custody and send to prison for approval.</p>
+</div>
+
+          </div>
+      
+
+      
+          <div class="govuk-grid-column-one-third card-group__item">
+              
+<div class="card card--clickable">
+<h2 class="govuk-heading-m card__heading">
+  <a class="govuk-link card__link govuk-link--no-visited-state" href="#">View and vary a licence after a release date</a>
+</h2>
+<p class="govuk-body card__description">Find standard determinate licences and post sentence supervision orders for people on licence and send variation requests to the PDU head for approval.</p>
+</div>
+
+          </div>
+
+  </div>
+
+
+  </div>
+</div>
+
+{% endblock %}
